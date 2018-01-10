@@ -1,0 +1,88 @@
+#color 0xffc3e1fe
+#coord 305 17
+#title The Subframe Lessons
+#title 101: Preliminaries
+
+#font 7px
+#color 0xfffbfbbb
+#coord 37 46
+#section 1.1 What is an Update?
+
+An update is an action that a particle performs every frame.
+
+For example:
+- CONV(METL) converts adjacent particles to METL.
+- BTRY SPRKs conductors.
+- SPRK'ed METL passes its SPRK to adjacent METL.
+
+#section 1.2 Particle IDs
+
+Every frame, particles are updated in order, starting from particle #1,
+then particle #2, and so on. This number is called the particle's ID.
+
+Every particle is assigned a unique ID upon creation and
+does not change its ID throughout the simulation.
+
+#section 1.3 Solid SPRK
+
+Normally, METL can only stay SPRK'ed for a few frames before
+entering a "reset" phase. This creates a flickering effect.
+
+A solid SPRK is a SPRK that does not flicker.
+
+Here, CONV(METL) converts the SPRK'ed METL into METL.
+Then, BTRY SPRKs it.
+
+Both happen in the same frame, before the particles are rendered.
+Thus, you will always see the METL SPRK'ed.
+
+Here, the BTRY's ID comes before the CONV's.
+The METL is SPRK'ed, then converted back to METL each frame.
+
+Thus, you will always see the METL not SPRK'ed.
+
+#font 5px
+#color 0xffbefcc4
+#coord 410 48
+#section Activity #1.1
+
+Mouseover this INSL.
+
+You should see #1227 here.
+
+If not, press 'D'.
+(This opens the 'Debug HUD')
+
+This means that the INSL's ID is 1227.
+
+It will be updated after particle #1226
+but before particle #1228.
+
+#section Activity #1.2
+
+Press '~' to open the Lua console.
+(You can close it by
+pressing '~' again.)
+
+
+Type
+
+
+and press ENTER.
+
+Now mouseover the CONV(METL)
+and press SHIFT-F.
+
+This updates all particles up to the
+particle under your mouse.
+
+Here, only particles up to the CONV(METL)
+are updated; the BTRY is not updated.
+
+So you should see the METL not SPRK'ed.
+
+This "subframe debugging mode" is useful
+for debugging and reverse engineering.
+
+Press 'F' to complete the rest of
+the particle updates in the frame.
