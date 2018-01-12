@@ -1,0 +1,83 @@
+#color 0xffc3e1fe
+#coord 305 17
+#title The Subframe Lessons
+#title 102: Particle Order
+
+#font 7px
+#color 0xfffbfbbb
+#coord 37 46
+#section 2.1 Subframe Order
+
+Here's some bad news:
+When you upload a save, Powder Toy messes up the IDs of your particles!
+
+This means that you might have a perfectly working subframe computer,
+but when you upload it, it breaks for everyone else.
+
+The good news is, Powder Toy messes up the IDs in a very predictable way.
+
+Particles are assigned IDs in order of their positions in space.
+Particles with larger y coords have larger IDs. For particles with
+the same y coord, those with larger x coords have larger IDs.
+
+I call this the "subframe order".
+
+#section 2.2 How to Subframe
+
+First, decide on an order of particle updates.
+
+Then, arrange the particles so that their subframe order
+matches your desired update order, yet satisfying device constraints.
+
+This isn't always possible; in later lessons we will learn
+a variety of tricks to overcome subframe order restrictions.
+
+#section 2.3 Particle Order Reloading
+
+When you test your devices, you always want to ensure that
+your particle IDs start out in subframe order.
+
+Thus, before every test, you need to perform a ritual called
+"particle order reloading".
+
+#font 5px
+#color 0xffbefcc4
+#coord 410 48
+#section Activity #2.1
+
+For this activity, you need to unpause.
+
+Here are two solid SPRK setups
+that are apparently identical.
+
+#space 20
+
+However, one works but not the other.
+
+Explain this.
+
+#answer
+Check the ID of the particles.
+The CONV and BTRY update in a different order!
+#answer
+
+#section Activity #2.2
+
+In the left setup, the CONV and BTRY
+are in the correct subframe order
+but not the correct ID order.
+
+We can fix the ID order with
+particle order reloading.
+
+Here's one way to do it.
+
+1. Ctrl-click this button (local save)
+
+Note that this is __different__ from
+creating a stamp.
+
+2. Ctrl-click this button (local load)
+
+Now, the left setup should be
+a working solid SPRK.
