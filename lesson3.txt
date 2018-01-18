@@ -1,0 +1,81 @@
+#color 0xffc3e1fe
+#coord 305 17
+#title The Subframe Lessons
+#title 103: Permanent BRAY
+
+#font 7px
+#color 0xfffbfbbb
+#coord 37 46
+#section 3.1 ARAY
+
+If activated with PSCN, ARAY shoots a special orange BRAY.
+This mode is generally not useful in subframe,
+but we'll use it here to illustrate some basic principles.
+
+As a subframer, you should think in terms of update functions.
+
+The relevant part of ARAY's update function is as follows.
+
+For each adjacent SPRK(PSCN) of __life 3__:
+Generate a BRAY in the direction opposite to the SPRK.
+
+#section 3.2 Life 3? What's that?
+
+SPRK has a property called "life". When created, it has a life of 4.
+
+Every frame, the life of all SPRKs are decreased by one.
+This happens __before any particle updates__.
+
+#section 3.3 Permanent BRAY
+
+Remember the CONV-BTRY combo in solid SPRK?
+Together, they convert a SPRK of life 3 to a SPRK of life 4.
+
+Since ARAY needs a SPRK of life 3, it needs to be placed
+__before__ the CONV-BTRY.
+
+The SPRK created by the BTRY will only "activate"* the ARAY
+__the next frame__, after its life has decreased to 3!
+
+* Always remember that SPRK never actually activates anything;
+it's the ARAY looking for the SPRK, not the other way round!
+
+#font 5px
+#color 0xffbefcc4
+#coord 410 48
+#section Activity #3.1
+
+Mouseover this SPRK.
+You should see Life: 4 here,
+since BTRY creates a SPRK of life 4.
+
+Now, enable subframe debugging mode.
+
+Shift-F this INSL, then check SPRK's life.
+It should now be 3, since life is
+decremented __before any particle updates__.
+
+#section Activity #3.2
+
+Make a permanent BRAY from scratch,
+pointing diagonally left and down.
+
+In other words, make this subframe!
+
+Here are some hints:
+- Set the ctype of CONV to PSCN by
+selecting PSCN and clicking on the CONV.
+This specifies what CONV converts SPRK into.
+You should then see "PSCN" appear here
+when you mouseover the CONV.
+- BTRY SPRKs conductors further away
+than you think.
+- Don't forget to reload particle order!
+- Use Shift-F to debug.
+
+#answer 150 10
+
+Extra credit: In the early days of subframe,
+two of the eight cardinal directions were
+thought to be especially difficult for
+permanent BRAY. Which two are these and why?

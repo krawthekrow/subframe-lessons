@@ -90,6 +90,9 @@ while true do
                 if maxAnswerX - minAnswerX < 150 then
                     maxAnswerX = minAnswerX + 150
                 end
+                if maxAnswerY - minAnswerY < 10 then
+                    maxAnswerY = minAnswerY + 10
+                end
                 drawBox(minAnswerX, minAnswerY, maxAnswerX, maxAnswerY,
                     elements.DEFAULT_PT_COAL, currColor)
                 local answerWidth = maxAnswerX - minAnswerX + 1
