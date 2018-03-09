@@ -1,0 +1,79 @@
+#color 0xffc3e1fe
+#coord 305 17
+#title The Subframe Lessons
+#title 106: Stacking
+
+#font 7px
+#color 0xfffbfbbb
+#coord 37 46
+#section 6.1 Particle Stacks
+
+Multiple particles can occupy the same location.
+This is called a "stack".
+
+For example, there is an ARAY underneath this INSL.
+
+You can stack up to 5 particles in the same location.
+Any more and it would turn into a BHOL.
+
+#section 6.2 Inspecting Stacks
+
+Normal right-click delete will delete the entire stack.
+
+Instead, use box delete (hold Ctrl down and right-click drag)
+to remove just the top "layer" of the stack.
+
+Try it on the INSL-ARAY above to see the hidden ARAY.
+
+Here's another fun stack to "unwrap".
+
+#section 6.3 Stacks in Subframe
+
+In a stack, the visible particle is the topmost one. As you
+remove layers, you progress deeper down the stack.
+
+In subframe order, particles in a stack are arranged
+from bottom to top.
+
+Here is a stacked permanent BRAY. We want ARAY, CONV then BTRY
+to update in that order, so they are arranged that way in the stack.
+
+#font 5px
+#color 0xffbefcc4
+#coord 410 48
+#section Activity #6.1
+
+Let's stack the green CRMC
+over the red DMND.
+
+First, arrange them in the order
+you want them to appear in the stack.
+
+This means that the green CRMC has to be
+to the right of (or below) the red DMND.
+
+Then, reload particle order.
+
+This will ensure that the green CRMC has a
+higher ID than the red DMND, so it will go
+above the red DMND in the stack.
+
+Mouseover the red DMND and check here
+to find its x and y coordinates.
+
+Now, use the PROP tool to set the
+green CRMC's coordinates to the
+red DMND's coordinates.
+
+To check that you have stacked successfully,
+remember to use box delete instead of
+normal delete to remove the topmost layer.
+
+#section Activity #6.2
+
+Use a DRAY stack to fill the red box with
+green particles in a single frame.
+
+#space 20
+
+#answer 150 10

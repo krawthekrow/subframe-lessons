@@ -1,0 +1,74 @@
+#color 0xffc3e1fe
+#coord 305 17
+#title The Subframe Lessons
+#title 107: Particle Visibility
+
+#font 7px
+#color 0xfffbfbbb
+#coord 37 46
+#section 7.1 Particle Visibility
+
+When particles are stacked, you can only see the topmost particle.
+Similarly, DRAY can only "see" the topmost particle in a particle stack.
+
+For example, this setup attempts to copy an INSL stacked over a CRMC.
+
+If you SPRK the PSCN, the DRAY duplicates the INSL.
+However, the CRMC is not duplicated. Use box delete to verify this.
+
+Since the CRMC is not the topmost particle in the stack,
+DRAY cannot "see" it and thus will not copy it.
+
+#section 7.2 Visibility Subtleties
+
+Recall from Lesson 3 how ARAY is activated.
+
+SPRK does not look for ARAY to activate; instead, ARAY looks for SPRKs.
+
+This means that we can stack things on top of ARAY without disabling it.
+It will update even if other particles can't "see" it.
+
+On the other hand, we can't stack things on top of the PSCN:
+
+- BTRY won't be able to "see" it and thus will not SPRK it.
+- ARAY won't be able to "see" it and thus will not be activated by it.
+
+The same applies to DRAY.
+
+#font 5px
+#color 0xffbefcc4
+#coord 410 48
+#section Activity #7.1
+
+Use stacking to make this permanent BRAY
+more compact.
+
+#space 15
+
+#answer 150 10
+
+#section Activity #7.2
+
+When making compact subframe electronics,
+BTRY can get unwieldy due to its
+large area of effect.
+
+CONV(SPRK) is a special type of CONV.
+It works just like BTRY, except that
+it only SPRKs conductors that it touches.
+
+You can make it by setting CONV's ctype
+to SPRK. There is no need to set its tmp.
+
+Try replacing the BTRY in the previous
+activity with CONV(SPRK).
+
+#answer 150 10
+
+Bonus: Another interesting feature of
+CONV(SPRK) is that it can SPRK a conductor
+stacked directly on top of it.
+
+#space 10
+
+          BTRY            CONV(SPRK)

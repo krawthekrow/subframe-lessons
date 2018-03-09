@@ -1,0 +1,84 @@
+#color 0xffc3e1fe
+#coord 305 17
+#title The Subframe Lessons
+#title 104: DRAY
+
+#font 7px
+#color 0xfffbfbbb
+#coord 37 46
+#section 4.1 DRAY
+
+DRAY copies particles from one position to another.
+
+Like ARAY, DRAY can operate in different modes depending
+on what conductor is used to activate it.
+
+Aside: When a conductor is SPRK'ed, what actually happens is that
+the conductor is replaced with a SPRK, and that SPRK's ctype is set
+to the conductor's type. Thus, strictly speaking, DRAY looks for an
+adjacent SPRK, and chooses its behavior based on the SPRK's ctype.
+
+Here, we'll focus on the PSCN mode. When activated by PSCN,
+DRAY will overwrite any particles in the copy destination area.
+
+As a special case, when DRAY "copies" empty space, it simply
+deletes any particle in the corresponding destination position.
+
+The number of particles it copies and the place to which
+it copies them can be configured via its "tmp" and "tmp2".
+
+#space 5
+SPRK this!
+
+#section 4.2 tmp and tmp2?
+
+Every particle in Powder Toy has a fixed set of properties.
+By now, you should be familiar with "ctype" and "life".
+
+"tmp" and "tmp2" are just additional properties a particle can have.
+They are intentionally generic: different kinds of particles use them
+to store different kinds of per-particle information.
+
+#font 5px
+#color 0xffbefcc4
+#coord 410 48
+#section Activity #4.1
+
+Configure this DRAY so that it copies
+the green particles into the red box.
+
+#space 10
+
+To set the DRAY's tmp/tmp2, use the
+PROP tool from the tools menu here.
+
+Select "tmp"/"tmp2", enter the new value,
+then click on the DRAY. Mouseover the DRAY;
+its tmp/tmp2 should appear here.
+
+Bonus:
+Try to get this to work on your first try!
+
+You can sample the coordinates of various
+positions under your mouse here.
+
+Use the Lua console (press '~') to quickly
+perform subtractions.
+
+#answer 150 10
+
+#section Activity #4.2
+
+Subframe DRAY works just like subframe ARAY.
+See if you can make this subframe!
+
+#space 10
+
+If you did it right, DRAY would delete WATR
+in the copy destination region every frame
+instead of every 8 frames.
+
+This would be fast enough that no WATR
+would reach the VOID.
+
+Remember to reload particle order!

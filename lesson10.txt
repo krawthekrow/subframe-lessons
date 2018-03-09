@@ -1,0 +1,66 @@
+#color 0xffc3e1fe
+#coord 305 17
+#title The Subframe Lessons
+#title 110: Binary Numbers
+
+#font 7px
+#color 0xfffbfbbb
+#coord 37 46
+#section 10.1 Binary Numbers
+
+Many computations involve numbers.
+However, logic gates only understand ON/OFF states.
+
+In computer jargon, ON/OFF states are called "bits".
+
+Binary is a way to represent numbers using bits.
+
+To represent a number in binary, we break it up into powers of two,
+always preferring larger powers:
+
+#space 12
+
+5 = 4 + 1      11 = 8 + 2 + 1      187 = 128 + 32 + 16 + 8 + 2 + 1
+
+Note that we will never have more than one of each power.
+If we have two 4s, for example, we would prefer to use an 8 instead.
+
+We assign each bit to a power of two.
+We turn the bit ON if the power of two is present, and OFF if it isn't.
+
+Here's a binary converter that you could use to get a better feel
+for binary.
+
+#font 5px
+#color 0xffbefcc4
+#coord 410 48
+#section Activity #10.1
+
+Convert the following numbers
+to binary by hand:
+
+3, 10, 35, 88
+
+Parse the following binary
+numbers by hand:
+
+10, 111, 1100, 10100
+
+Use the decimal-to-binary
+converter to check your answers.
+
+#section Activity #10.2
+
+Make a circuit that multiplies an
+8-bit binary number by 8.
+
+#answer 150 30
+
+#section Activity #10.3
+
+Make a circuit that outputs ON if
+two 4-bit numbers are the same.
+
+This doesn't need to be subframe.
+
+#answer 160 50

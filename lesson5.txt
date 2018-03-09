@@ -1,0 +1,127 @@
+#color 0xffc3e1fe
+#coord 305 17
+#title The Subframe Lessons
+#title 105: Fun with ARAY
+
+#font 5px
+#color 0xffbefcc4
+#coord 50 48
+#section Activity #5.1
+
+This is a rather difficult activity,
+so don't worry if you can't figure
+it out without hints.
+
+Make a downward-pointing
+permanent BRAY.
+
+In other words,
+make this subframe!
+
+You should find that impossible
+to do using only the skills
+you learnt in Lesson 3.
+
+But you now know enough to
+overcome that! Can you see how?
+
+Remember to reload particle order.
+Use Shift-F to debug.
+
+#hint
+Maybe you could generate the
+solid SPRK somewhere else?
+#hint
+
+#hint
+Use DRAY to copy a solid SPRK
+from elsewhere.
+#hint
+
+#hint
+Make sure that the solid SPRK has
+life 3 when ARAY is updated!
+#hint
+
+#answer 150 10
+
+#font 5px
+#color 0xffbefcc4
+#coord 230 48
+#section Activity #5.2
+
+By default, CONV(PSCN) converts
+everything it touches to PSCN.
+
+You can use its tmp to tell it
+to only convert SPRKs to PSCN.
+
+To do this, we'll need SPRK's
+element ID.
+
+Enter
+
+into the Lua console.
+
+(You can access the Lua console
+by pressing '~'.)
+
+The number that appears is SPRK's
+element ID.
+
+Now, here's a permanent BRAY setup.
+It doesn't work because CONV's tmp
+is set to 1 (DUST), so it's not
+converting anything.
+
+#space 20
+
+Set its tmp to SPRK's element ID
+and see it spring to life!
+
+Can you make a downward permanent
+BRAY smaller than the one you made
+in Activity #5.1?
+
+#answer 150 10
+
+#font 5px
+#color 0xffbefcc4
+#coord 410 48
+#section Activity #5.3
+
+So far, we've been using orange BRAY
+for everything.
+
+However, we will soon see that white
+BRAY is a lot more useful for subframe.
+
+To make white BRAY, activate ARAY with
+any other conductor. Here, we'll use METL.
+
+#space 20
+
+Notice how the white BRAY refuses to
+stay permanent, even though it's
+activated by a solid SPRK.
+
+This is because ARAY will not shoot a
+BRAY if it sees a BRAY directly in
+front of it.
+
+You now know enough to fix this.
+Make a permanent white BRAY!
+
+In other words, make this subframe.
+
+#hint
+Use DRAY to delete any existing BRAY
+before ARAY tries to generate a new one.
+#hint
+
+#hint
+Make sure the DRAY is activated
+before the ARAY.
+#hint
+
+#answer 150 10

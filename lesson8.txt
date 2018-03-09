@@ -1,0 +1,81 @@
+#color 0xffc3e1fe
+#coord 305 17
+#title The Subframe Lessons
+#title 108: DRAY Wires
+
+#font 7px
+#color 0xfffbfbbb
+#coord 37 46
+#section 8.1 Signal Propagation
+
+Let's say we want this PSCN to control this ARAY.
+
+One idea is to copy the PSCN to the ARAY with DRAY.
+SPRK the PSCN. Did it work? (It shouldn't.)
+
+We can debug this by stepping forward frame-by-frame.
+Press 'f' to step forward a frame.
+
+Observe that it takes two frames for the signal to reach the ARAY.
+By the time the SPRK reaches the ARAY, its life has decreased to 2.
+
+This problem arises because the first DRAY updates after the second DRAY.
+
+#section 8.2 DRAY Wires
+
+There are a number of ways to overcome this problem.
+
+One way is to copy the SPRK downwards first, then rightwards.
+This works because the first DRAY updates before the second DRAY.
+
+A more general method is to replace the activating PSCN
+(instead of the copied PSCN) in the DRAY-PSCN motif.
+
+Again, this works because the DRAYs update in the correct order.
+
+#section 8.3 Inverting Wires
+
+Another type of DRAY wire is the inverting wire.
+
+Here, we copy a PSCN onto a solid SPRK, deactivating the DRAY.
+This transmits and inverts the signal at the same time.
+
+#font 5px
+#color 0xffbefcc4
+#coord 410 48
+#section Activity #8.1
+
+Use stacking to make this set of
+wires as compact as possible.
+
+#space 15
+
+#answer 150 10
+
+#section Activity #8.2
+
+Make this PSCN control all four ARAYs.
+
+#space 15
+
+#answer 150 10
+
+#section Activity #8.3
+
+What happens if two wires lead
+to the same output?
+
+Here are examples for both normal
+and inverting wires.
+
+#space 20
+
+Play with them by SPRK-ing different
+combinations of their inputs.
+
+What do you observe?
+
+#answer
+These are OR and NOR gates.
+We'll learn about NOR gates next lesson!
+#answer

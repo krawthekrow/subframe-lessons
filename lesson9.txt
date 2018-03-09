@@ -1,0 +1,70 @@
+#color 0xffc3e1fe
+#coord 305 17
+#title The Subframe Lessons
+#title 109: NOR Logic
+
+#font 7px
+#color 0xfffbfbbb
+#coord 37 46
+#section 9.1 NOR Gates
+
+A NOR gate outputs ON if neither of its inputs are ON.
+You saw how to make a simple subframe NOR gate in the previous lesson.
+
+Let's take a quick break from subframe to review
+some principles of digital logic design.
+
+#section 9.2 NOR Logic
+
+NOR gates are universal -- any logic circuit can be constructed
+entirely out of NOR gates.
+
+A NOT gate outputs ON only if its input is OFF.
+It can be constructed from a NOR gate by leaving
+one input OFF.
+
+An OR gate outputs ON if either of its inputs are ON.
+It can be constructed by adding a NOT gate after a
+NOR gate.
+
+An AND gate outputs ON only if both its inputs are ON.
+That is, it outputs ON only if neither input is OFF.
+
+More schematics can be found in the Wikipedia article on NOR logic.
+
+Warning: The NOR gate used in this lesson cannot be rotated.
+
+#font 5px
+#color 0xffbefcc4
+#coord 410 48
+#section Activity #9.1
+
+An XOR gate outputs ON if exactly one,
+but not both, of its inputs are ON.
+
+Construct an XOR gate out of NOR gates.
+Use the provided NOR gate design.
+
+If you get stuck, you can consult
+the Wikipedia schematics.
+
+#answer 150 30
+
+#section Activity #9.2
+
+Make a subframe AND gate using
+DRAY NOR gates.
+
+For simplicity, point all your
+DRAYs rightwards.
+
+Here's a subframe OR gate,
+for reference.
+
+#space 20
+
+#answer 150 10
+
+Bonus: Make a subframe XOR gate.
+
+#answer 150 10
