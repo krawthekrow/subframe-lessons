@@ -1,0 +1,80 @@
+#color 0xffc3e1fe
+#coord 305 17
+#title The Subframe Lessons
+#title 111: FILT
+
+#font 7px
+#color 0xfffbfbbb
+#coord 37 46
+#section 11.1 FILT Data
+
+FILT's ctype contains 30 bits of information.
+You can visualize FILT's ctype from its spectrogram.
+
+Mouseover this FILT to see its spectrogram.
+
+You can treat this sequence of bits as a number in binary.
+For example, this FILT represents the number 197.
+
+Here's an enlarged view of that FILT's spectrogram.
+
+#space 40
+
+If you send a BRAY through a FILT, the BRAY picks up the FILT's ctype.
+You can also visualize BRAY's ctype from its spectrogram.
+
+#section 11.2 DTEC
+
+DTEC allows you to transfer a BRAY's ctype back to FILT.
+
+Each frame, DTEC searches for BRAYs within a square box.
+The search area's size is controlled by DTEC's tmp2.
+
+If DTEC finds a BRAY, it copies the BRAY's ctype
+to lines of FILT in all 8 directions.
+
+If DTEC finds multiple BRAYs, it takes the rightmost one.
+If there are multiple rightmost BRAYs, it takes the bottommost one.
+
+#font 5px
+#color 0xffbefcc4
+#coord 410 48
+#section Activity #11.1
+
+The game displays BRAY's ctype
+as a number in the HUD.
+
+Mouseover this BRAY to see its ctype.
+
+#space 10
+
+Now use ARAY to determine
+this FILT's ctype.
+
+#answer
+123456
+#answer
+
+#section Activity #11.2
+
+Copy the ctype of the FILT marked 'S'
+to the FILT marked 'D' within the same frame.
+
+#space 20
+
+If you did it right, both FILTs should
+have the same color every frame.
+
+#answer 150 20
+
+Challenge: do the same thing, but only
+by adding particles within the blue boxes.
+
+#space 20
+
+#hint
+Use ARAY/DTEC to "make way"
+for the downward DRAY.
+#hint
+
+#answer 150 20
