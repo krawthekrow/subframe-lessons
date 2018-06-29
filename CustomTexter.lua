@@ -1,3 +1,6 @@
+-- Modified from byzod's Texter
+-- http://powdertoy.co.uk/Discussions/Thread/View.html?Thread=15905
+
 -- Version: Unspeakable Crawling Skully
 
 if Texter == nil then

@@ -112,6 +112,7 @@ while true do
                         currX, currY, currX, currY
                 else
                     drawAnswerBox()
+                    currY = maxAnswerY + 6
                 end
             else
                 local args = arg:split(' ')
