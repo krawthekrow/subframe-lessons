@@ -1,0 +1,77 @@
+#color 0xffc3e1fe
+#coord 305 17
+#title The Subframe Lessons
+#title 113: BRAY Annihilation
+
+#font 7px
+#color 0xfffbfbbb
+#coord 37 46
+#section 13.1 INWR-Mode DRAY
+
+When activated with any conductor other than PSCN, DRAY will not
+overwrite or delete particles in the copy destination area.
+
+When activated by INWR, DRAY will additionally not copy diagonally.
+
+#space 20
+
+#section 13.2 FILT to SPRK
+
+Using BRAY annihilation, we can translate FILT data into a SPRK bit.
+
+One way is to use BRAY to spark a conductor directly.
+However, this creates a SPRK with life = 4, which can't
+be used to activate other circuits within the same frame.
+
+A better way is to use DRAY in INWR mode.
+
+For example, this circuit activates an ARAY only if
+the input FILT's ctype is even.
+
+This works by checking if the last bit (representing "1" in binary)
+is set. Specifically, A & 1 = 0 only if A is even.
+
+If the last bit isn't set, the BRAY is annihilated, and the INWR-mode
+DRAY copies a SPRK with life = 3 into the spot where the BRAY
+would otherwise have gone. We call this spot the BRAY output zone.
+
+As usual, the BRAY (if the input is odd) or SPRK (if the input is even)
+needs to be cleared every frame. This DRAY handles both cases.
+
+#font 5px
+#color 0xffbefcc4
+#coord 410 48
+#section Activity #13.1
+
+In an effort to save space, a fellow
+subframer tried the following design
+for the even/odd detector:
+
+#space 20
+
+Instead of copying a SPRK into the
+BRAY output zone, this design copies
+in the ARAY.
+
+However, as you can see, the ARAY
+fails to activate even if the input
+ctype is even. What's wrong?
+
+#answer
+When the ARAY is copied in, the game
+assigns the newly created ARAY an ID.
+
+This ID does not come before the IDs of
+the CONV stack. The CONVs reset the
+PSCN before the ARAY's update function
+is run, so the ARAY is not activated.
+
+Always remember that particle ID order
+does not necessarily follow subframe
+order, unless you have just reloaded
+particle order.
+#answer
+
+As a rule of thumb, you should avoid
+copying activated particles like ARAY
+and DRAY into empty space.
