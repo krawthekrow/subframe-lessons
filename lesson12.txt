@@ -1,0 +1,89 @@
+#color 0xffc3e1fe
+#coord 305 17
+#title The Subframe Lessons
+#title 112: FILT Modes
+
+#font 7px
+#color 0xfffbfbbb
+#coord 37 46
+#section 12.1 Bitwise Operations
+
+FILT allows you to apply logic gates to
+all 30 bits of its ctype at once.
+
+These are called bitwise operations.
+
+For example, we say that 19 AND 26 is 18.
+
+You can check this by writing them out in binary
+and taking the AND of every pair of bits.
+
+#section 12.2 FILT Modes
+
+You can perform bitwise operations by setting FILT's tmp.
+
+FILT with tmp = 1 performs the AND operation. When a BRAY is
+sent into it, the ctype of the BRAY coming out will be the
+AND of the incoming BRAY's ctype and the FILT's ctype.
+
+Other operations include OR (tmp = 2), XOR (tmp = 7) and
+"subtract color" (tmp = 3). The "subtract color" gate outputs
+ON only if the first input (i.e. bits from the incoming BRAY)
+is ON and the second input (i.e. bits from FILT) is OFF.
+
+By default, FILT has tmp = 0, which overwrites the BRAY's ctype
+with its own ctype. FILT with tmp = 6 does nothing.
+
+We will use the symbol "&" for AND, "|" for OR, "^" for XOR
+and "\" for "subtract color".
+
+#color 0xffeee561
+
+  19 & 26 = 18    19 | 26 = 27    19 ^ 26 = 9    19 \ 26 = 1
+
+#font 5px
+#color 0xffbefcc4
+#coord 410 48
+#section Activity #12.1
+
+You can tell what mode a FILT is in
+from the HUD.
+
+Mouseover this FILT to see what
+operation it performs.
+
+#section Activity #12.2
+
+What happens when you take the XOR of
+a number with itself?
+
+#answer
+You get zero! XOR outputs zero
+if both inputs are the same.
+#answer
+
+Try using FILT to take the XOR of a
+number with itself. What happens?
+
+#answer
+Nothing comes out!
+#answer
+
+This effect is called "BRAY annihilation".
+Whenever the result of a bitwise operation
+is zero, no BRAY will come out of the FILT.
+
+#section Activity #12.3
+
+Without changing the tmp of these FILTs,
+compute their XOR within the same frame.
+
+#hint
+Use ARAY/DTEC to transfer one of the
+FILT's ctype to a new FILT with tmp = 7.
+#hint
+
+#answer 150 10
+
+Challenge: Do the same thing but
+without using tmp = 7.
